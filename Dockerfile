@@ -1,4 +1,4 @@
-FROM httpd:alpine:2
+FROM httpd:2-alpine
 
 COPY ./.htaccess /var/www/html/
 
