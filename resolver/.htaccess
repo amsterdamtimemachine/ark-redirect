@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirect requests to the ATM-KG browser
+RewriteRule ^(.*)$ https://lod.uba.uva.nl/ATM/ATM-KG/browser?resource=https://id.amsterdamtimemachine.nl/$1 [R=302,L]
+
+# Todo: redirect when URI ends with question mark (ARK metadata)
+# I don't think this can be done in Apache?
+
+# Todo: content negotiation
+# and set up a server that gives back some RDF response
+# can be the result of a construct query
